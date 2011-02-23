@@ -194,3 +194,137 @@ java.lang.NullPointerException
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
 	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2011-02-23 00:21:47.900
+!MESSAGE Exception occurred during problem detection:
+----------------------------------- SOURCE BEGIN -------------------------------------
+
+var d=new Date();
+var theDay=d.getDay();
+var r = confirm("Do You wish to know the day?");
+if (r == true);
+	{
+	switch (theDay)
+	{
+	case 1:
+		alert("Manic Monday");
+		break;
+	case 2:
+		alert("Terrible Tuesday");
+		break;	
+	case 3:
+		alert("Wind-up Wednesday");
+		break;	
+	case 4:
+		alert("This is Thursday");
+		break;  
+	case 5:
+		alert("Finally Friday");
+		break;
+	case 6:
+		alert("Super Saturday");
+		break;
+	case 0:
+		alert("Sleepy Sunday");
+		break;
+	default:
+		document.write("I'm looking forward to this weekend!");
+}
+}
+<button type="button" onclick="displayDate()">Display Date</button>
+	{
+		var i=0;
+		for (i=0;i<=5;i++)
+		{
+		document.write("The number is " + i);
+		document.write("<br />");
+		}
+		var i=0;
+	
+		while (i<=5)
+		{
+		document.write("The number is " + i);
+		document.write("<br />");
+		i++;
+		}
+	}
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:265)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:320)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1183)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.wst.jsdt.ui 4 0 2011-02-23 00:21:47.902
+!MESSAGE Error in JSDT Core during reconcile
+!STACK 1
+JavaScript Model Exception: java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:298)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:320)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1183)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:265)
+	... 15 more
+Caused by: java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:265)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:320)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1183)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.wst.jsdt.core 4 1005 2011-02-23 00:21:47.902
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:265)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnitProblemFinder.process(CompilationUnitProblemFinder.java:320)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:197)
+	at org.eclipse.wst.jsdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:96)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:742)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.wst.jsdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1183)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:95)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:76)
+	at org.eclipse.wst.jsdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:143)
+	at org.eclipse.wst.jsdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:85)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:94)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
