@@ -31,7 +31,7 @@ if (r == true);
 		document.write("I'm looking forward to this weekend!");
 	}
 	}
-elce
+elce;
 	{
 		var i=0;
 		for (i=0;i<=5;i++)

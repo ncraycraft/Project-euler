@@ -328,3 +328,24 @@ java.lang.NullPointerException
 	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
 	at org.eclipse.wst.jsdt.internal.ui.text.JavaReconciler.process(JavaReconciler.java:371)
 	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SESSION 2011-02-23 16:56:04.853 -----------------------------------------------
+eclipse.buildId=I20100608-0911
+java.version=1.6.0_14
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.javascript.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.javascript.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-02-23 16:56:29.912
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2011-02-23 16:57:04.404
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2011-02-23 16:57:04.404
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.wst.jsdt.ui.JavaElementCreationActionSet/org.eclipse.wst.jsdt.ui.actions.OpenProjectWizard':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.wst.jsdt.ui.JavaElementCreationActionSet/org.eclipse.wst.jsdt.ui.actions.OpenProjectWizard,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.jsdt.internal.ui.wizards.OpenJavaScriptFileWizardToolbarAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.wst.jsdt.ui.JavaElementCreationActionSet,org.eclipse.ui.internal.WorkbenchWindow@63f796d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@63f796d0)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.wst.jsdt.ui.JavaElementCreationActionSet/org.eclipse.wst.jsdt.ui.actions.OpenProjectWizard,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.wst.jsdt.internal.ui.wizards.OpenJavaScriptProjectWizardToolbarAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.wst.jsdt.ui.JavaElementCreationActionSet,org.eclipse.ui.internal.WorkbenchWindow@63f796d0),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@63f796d0)),sourcePriority=16640)
