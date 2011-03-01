@@ -1,0 +1,158 @@
+
+001	<html>
+002	 
+003	<head>
+004	 
+005	 
+006	 
+007	<script type="text/javascript">
+008	 
+009	function jsObj() {
+010	 
+011	    this.m_public; //public variable
+012	 
+013	    this.o_griffins; //public variable
+014	 
+015	 
+016	 
+017	    this.doGriffins = doGriffins; // public method
+018	 
+019	    this.doSayItOutLoud = doSayItOutLoud; // public method
+020	 
+021	    this.getPrivateVariable = getPrivateVariable; // public method
+022	 
+023	 
+024	 
+025	    var m_private; // private variable
+026	 
+027	 
+028	 
+029	    alert('It's alive!'); //"constructor"
+030	 
+031	 
+032	 
+033	    function doSayItOutLoud(m_var_fp) { // this method is public because it has a "this." pointer
+034	 
+035	        this.m_public = m_var_fp;
+036	 
+037	        if (confirm(m_var_fp + ' is public knowledge. Do you wish to save it?')) {
+038	 
+039	            setPrivateVariable(m_var_fp);
+040	 
+041	        }
+042	 
+043	    }
+044	 
+045	 
+046	 
+047	    function doGriffins() {
+048	 
+049	        this.o_griffins = new familyObj();
+050	 
+051	    }
+052	 
+053	 
+054	 
+055	    function getPrivateVariable() { //this method is public because it has a "this." pointer
+056	 
+057	        alert('The private variable is ' + m_private);
+058	 
+059	    }
+060	 
+061	 
+062	 
+063	    function setPrivateVariable(m_var_fp) { //this method is private because it has no "this." pointer
+064	 
+065	        m_private = m_var_fp;
+066	 
+067	    }
+068	 
+069	}
+070	 
+071	 
+072	 
+073	 
+074	 
+075	function familyObj() {
+076	 
+077	    this.doMeg = doMeg;
+078	 
+079	    this.doPeter = doPeter;
+080	 
+081	    this.doStewie = doStewie;
+082	 
+083	 
+084	 
+085	    function doMeg(m_var_fp) {
+086	 
+087	        alert(m_var_fp + '. Is that what you want me to say?');
+088	 
+089	    }
+090	 
+091	 
+092	 
+093	    function doPeter() {
+094	 
+095	        alert('Bird, bird, bird, bird is the word!');
+096	 
+097	    }
+098	 
+099	 
+100	 
+101	    function doStewie() {
+102	 
+103	        alert('Thoughtless heathen programmer only gave me an alert().');
+104	 
+105	    }
+106	 
+107	}
+108	 
+109	 
+110	 
+111	var o_jsobj = new jsObj();
+112	 
+113	</script>
+114	 
+115	</head>
+116	 
+117	<body>
+118	 
+119	<div>
+120	 
+121	        For a good time, paste these snippets into your address bar!
+122	 
+123	    <ul>
+124	 
+125	        <li>javascript:o_jsobj.doSayItOutLoud('Yo!');</li>
+126	 
+127	 
+128	 
+129	        <li>javascript:alert(o_jsobj.m_public);</li>
+130	 
+131	        <li>javascript:alert(o_jsobj.m_public);</li>
+132	 
+133	        <li>(if you saved a variable) javascript:o_jsobj.getPrivateVariable();</li>
+134	 
+135	        <li>javascript:o_jsobj.getPrivateVariable();</li>
+136	 
+137	 
+138	 
+139	        <li>javascript:o_jsobj.doGriffins();</li>
+140	 
+141	        <li>javascript:o_jsobj.o_griffins.doMeg('Booger');</li>
+142	 
+143	        <li>javascript:o_jsobj.o_griffins.doPeter();</li>
+144	 
+145	        <li>javascript:o_jsobj.o_griffins.doStewie();</li>
+146	 
+147	 
+148	 
+149	    </ul>
+150	 
+151	</ul>
+152	 
+153	</div>
+154	 
+155	</body>
+156	 
+157	</html>
